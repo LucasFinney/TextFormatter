@@ -7,15 +7,15 @@ Created on Thu Nov 23 13:06:58 2023
 import csv
 import os
 
-path = input("Enter file path (or just the name if it's in this folder)")
-numCols = input("Enter the desired number of columns")
+path = input("Enter file path (or just the name if it's in this folder): \n")
+numCols = input("Enter the desired number of columns: \n")
 
 # Open the file
 with open(path,'r') as f:
     data = [line.strip() for line in f] #Iterate over the lines, creating a new list element for each
     
 # Group every pair
-data = zip(*[iter(data)]*3)
+data = zip(*[iter(data)]*numCols)
 
 # Create the CSV file
 with open('output.csv','w', newline = '') as f:
