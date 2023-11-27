@@ -8,7 +8,7 @@ import csv
 import os
 
 path = input("Enter file path (or just the name if it's in this folder): \n")
-numCols = input("Enter the desired number of columns: \n")
+numCols = int(input("Enter the desired number of columns: \n"))
 
 # Open the file
 with open(path,'r') as f:
